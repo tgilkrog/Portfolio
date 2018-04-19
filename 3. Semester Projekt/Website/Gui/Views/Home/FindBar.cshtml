@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Gui.CustomerServiceRef.Customer>
+
+<h2>Vælg en Bar</h2>
+
+<table style="color:white; margin-left:50px;">
+@foreach (var item in Model) {
+    <tr>
+        <th>
+            <h2>@Html.DisplayFor(modelItem => item.CusName)</h2> 
+        </th>
+    </tr>
+    <tr>
+        <th width="320px" rowspan="2">
+            <a href="@Url.Action("Details", "Customer", new { id = item.ID })"><img src="@Url.Content(item.Img)" alt="Image" height="150px" width="300px" /></a>
+        </th>
+        <td width="250px" valign="top"> 
+            Email: @Html.DisplayFor(modelItem => item.Email) <br />
+            Addresse: @Html.DisplayFor(modelItem => item.Address)<br />
+            Telefon: @Html.DisplayFor(modelItem => item.Phone)<br />
+            Region:@Html.DisplayFor(modelItem => item.Region)
+        </td>
+    </tr>
+    <tr>
+        <td valign="bottom">
+            <input id="Button1" type="submit" value="Detaljer" onclick="location.href='@Url.Action("Details", "Customer", new { id = item.ID })'" />
+        </td>
+    </tr>
+    <tr>
+        <th height="20px"></th>
+    </tr>
+}
+</table>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="50d27d74-bd2f-4843-9db6-16deedea1473" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCF/StorageService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="4cb7dc4b-8035-4248-8ee2-8a93cceb600b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/StorageService/?xsd=xsd2" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="70868c3f-0113-40ae-b4e8-f6290858bf32" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/StorageService/?disco" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="8aeb51f0-d69d-4d97-b226-96b8b8cbef9e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/StorageService/?xsd=xsd0" />
+    <MetadataFile FileName="StorageService.wsdl" MetadataType="Wsdl" ID="2ddb01a3-8147-4aac-9486-dac827f06b33" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/StorageService/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="b5b87434-220f-404d-8f91-63d281ce273d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/StorageService/?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

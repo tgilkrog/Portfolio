@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="38a1ad69-eb08-4840-b0aa-f1d184fe58c7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCF/UserService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d78e3ec6-8adb-48ca-bd6c-c4113948db3c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/UserService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="1f200d3b-8d6c-49e3-a99f-d5c85c0c2066" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/UserService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="310c671f-3fd1-494e-83e4-5381cd38c3d0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/UserService/mex" />
+    <MetadataFile FileName="ModelLayer.xsd" MetadataType="Schema" ID="1891549b-ca0d-4d60-98ed-c8662a4eced8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF/UserService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

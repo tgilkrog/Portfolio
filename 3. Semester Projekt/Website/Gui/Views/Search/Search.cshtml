@@ -1,0 +1,112 @@
+﻿@model dynamic
+@using Gui.DrinkServiceRef
+@using Gui.CustomerServiceRef
+@using Gui.IngredientServiceRef
+@using System.Dynamic
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Søg</h2>
+
+@if (@Model.Drinks != null)
+{
+    <h3>Drinks</h3>
+<table class="table" style="color: white;">
+    <tr>
+        <th>
+            Billede
+        </th>
+        <th>
+            Navn
+        </th>
+        <th>
+            Beskrivelse
+        </th>
+        <th>
+            Pris
+        </th>
+    </tr>
+@foreach (var item in @Model.Drinks)
+{
+    <tr>
+        <td width="110">
+            <img src="@Url.Content(item.Img)" alt="Image" height="100px" width="100px" />
+        </td>
+        <td width="200">
+            <h4>@item.Name</h4>
+        </td>
+        <td>
+            <p>@item.Description</p>
+        </td>
+        <td>
+            <p>@item.Price kr.</p>
+        </td>
+    </tr>
+}
+</table>
+}
+
+<h3>Ingredient</h3>
+    <table class="table" style="color: white;">
+        <tr>
+            <th>
+                Navn
+            </th>
+            <th>
+                Procent
+            </th>
+        </tr>
+        @foreach (var ing in @Model.Ingredients)
+        {
+            <tr>
+                <th>
+                    <P>@ing.Name</P>
+                </th>
+                <th>
+                    <p>@ing.Procent %</p>
+                </th>
+            </tr>
+        }
+    </table>
+
+    @if (@Model.Customers != null)
+    {
+        <h3>Barer</h3>
+        <table class="table" style="color: white;">
+            <tr>
+                <th>
+                    
+                </th>
+                <th>
+                    Navn
+                </th>
+                <th>
+                    Region
+                </th>
+                <th>
+                    Adresse
+                </th>
+            </tr>
+            @foreach (var cus in @Model.Customers)
+            {
+                <tr>
+                    <th width="120px">
+                        <img src="@Url.Content(cus.Img)" alt="Image" height="100px" width="200px" />
+                    </th>
+                    <th>
+                        <p>@cus.CusName</p> 
+                    </th>
+                    <th>
+                        <p>@cus.Region</p>
+                    </th>
+                    <th>
+                        <p>@cus.Address</p>
+                    </th>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {<h3>Ingen bars fundet</h3> }

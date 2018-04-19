@@ -1,0 +1,55 @@
+﻿<Page x:Class="WpfDrinkzy.DrinkPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfDrinkzy"
+      mc:Ignorable="d" 
+      d:DesignHeight="665" d:DesignWidth="1000"
+      Title="DrinkPage">
+
+    <Grid>
+        <!--<TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>-->
+        <ListView x:Name="DrinkList" HorizontalAlignment="Left" Height="500" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" SelectionChanged="Changer">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}"/>
+                    <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Description}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="331,44,0,0" VerticalAlignment="Top"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="330,70,0,0" VerticalAlignment="Top"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="330,102,0,0" VerticalAlignment="Top"/>
+        <Label Content="Image" HorizontalAlignment="Left" Margin="330,127,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtDesc" HorizontalAlignment="Left" Height="23" Margin="413,74,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtPrice" HorizontalAlignment="Left" Height="23" Margin="413,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtImg" HorizontalAlignment="Left" Height="62" Margin="413,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtName" HorizontalAlignment="Left" Height="23" Margin="413,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="345,198,0,0" VerticalAlignment="Top" Width="90" Click="createDrink_Click"/>
+        <Button Content="Update Drink" HorizontalAlignment="Left" Margin="455,198,0,0" VerticalAlignment="Top" Width="90" Click="drinkUpdate_click"/>
+        <Button Content="Delete" Background="PaleVioletRed" HorizontalAlignment="Left" Margin="455,223,0,0" VerticalAlignment="Top" Width="90" Click="DeleteDrink_click"/>
+        <Button Content="Clean TextBoxes" HorizontalAlignment="Left" Margin="331,11,0,0" VerticalAlignment="Top" Width="90" Click="cleanBoxes_click"/>
+        <ListView x:Name="IngredientList" HorizontalAlignment="Left" Height="100" Margin="345,279,0,0" VerticalAlignment="Top" Width="200">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Procent" DisplayMemberBinding="{Binding Procent}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="AllIngredientList" HorizontalAlignment="Left" Height="400" Margin="681,41,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="Changer">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Procent" DisplayMemberBinding="{Binding Procent}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Ingredientser på Den valgte drink" HorizontalAlignment="Left" Margin="345,248,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tilføj Ingredient til Drink" HorizontalAlignment="Left" Margin="681,10,0,0" VerticalAlignment="Top"/>
+        <Button Content="Tilføj" HorizontalAlignment="Left" Margin="601,47,0,0" VerticalAlignment="Top" Width="75" Click="AddIngredient_click"/>
+        <Button Content="Delete Ingredients" HorizontalAlignment="Left" Margin="346,384,0,0" VerticalAlignment="Top" Width="105" Click="DeleteIng_click"/>
+    </Grid>
+</Page>

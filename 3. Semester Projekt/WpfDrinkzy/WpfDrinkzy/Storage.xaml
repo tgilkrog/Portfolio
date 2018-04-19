@@ -1,0 +1,37 @@
+﻿<Page x:Class="WpfDrinkzy.Storage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfDrinkzy"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="Storage">
+
+    <Grid>
+        <ListView x:Name="CustomerList" HorizontalAlignment="Left" Height="500" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" SelectionChanged="Changer">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding CusName}"/>
+                    <GridViewColumn Header="Region" DisplayMemberBinding="{Binding Region}"/>
+                    <GridViewColumn Header="Description" DisplayMemberBinding="{Binding Address}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="StorageList" HorizontalAlignment="Left" Height="500" Margin="315,10,0,0" VerticalAlignment="Top" Width="300" SelectionChanged="Changer2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Drink.Name}"/>
+                    <GridViewColumn Header="Amount" DisplayMemberBinding="{Binding Amount}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox Name="txtAmount" HorizontalAlignment="Left" Height="23" Margin="761,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Amount" HorizontalAlignment="Left" Margin="703,30,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtMinAMount" HorizontalAlignment="Left" Height="23" Margin="761,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtMaxAmount" HorizontalAlignment="Left" Height="23" Margin="761,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Min Amount" HorizontalAlignment="Left" Margin="684,55,0,0" VerticalAlignment="Top"/>
+        <Label Content="Max Amount" HorizontalAlignment="Left" Margin="683,83,0,0" VerticalAlignment="Top"/>
+        <Button Content="Updatee" HorizontalAlignment="Left" Margin="730,136,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+    </Grid>
+</Page>

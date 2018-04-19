@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Gui.OrderServiceRef.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+   <input id="Button1" type="button" value="Opret Order" onclick="location.href='@Url.Action("CreateOrder", "Order")'" />
+</p>
+<table class="table" style="color: white;">
+    <tr>
+        <th>
+            Dato
+        </th>
+        <th>
+            Tilbud
+        </th>
+        <th>
+            Status
+        </th>
+        <th>
+            Total Pris
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalPrice)
+        </td>
+        <td>
+            <input id="btnDetails" type="button" value="Detaljer" onclick="location.href='@Url.Action("Details", "Order", new { id = item.ID })'" />
+            <input id="btnDelete" type="button" value="Slet" onclick="location.href='@Url.Action("DeleteOrder", "Order", new { ID = item.ID })'" />
+        </td>
+    </tr>
+}
+
+</table>

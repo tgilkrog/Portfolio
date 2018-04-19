@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "shoppage";
+}
+<h2>Crazy daisy</h2>
+<font color="#bababa">Søg efter en Bar: </font><input id="searchBar" type="text" /> <input id="btnSearch" type="button" value="Søg"  />
+
+<div class="drinksmenu" style="background-color: #191919;">
+    <h2 style="background-color:  #ff3900; color: black;">Drinks Menu</h2>
+        <input type="submit" class="btn btn-primary btn-block" value="Drink" onclick="location.href='@Url.Action("Index", "Drink")'" /> <br />
+        <input type="submit" class="btn btn-primary btn-block" value="Shots" onclick="location.href='@Url.Action("Shots", "Shop")'" /> <br />
+        <input type="submit" class="btn btn-primary btn-block" value="Snacks" onclick="location.href='@Url.Action("Snacks", "Shop")'" />
+</div>

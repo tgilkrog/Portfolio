@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Gui.DrinkServiceRef.Drink>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Drinks</h2>
+<table class="table" style="color: white;">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Img)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="@Url.Content(item.Img)" alt="Image" height="200px" width="200px" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            <input id="Button1" type="submit" value="Tilføj til kurv" onclick="location.href='@Url.Action("Create", "Drink", new { drinkId = item.ID })'" />
+            <input id="btnDetails" type="button" value="Detaljer" onclick="location.href='@Url.Action("Details", "Drink", new { drinkId = item.ID })'" />
+        </td>
+    </tr>
+}
+</table>

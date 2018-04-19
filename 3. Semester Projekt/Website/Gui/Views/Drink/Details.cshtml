@@ -1,0 +1,73 @@
+﻿@model Gui.DrinkServiceRef.Drink
+    @using Gui.Helpers
+
+<h2>@Model.Name</h2>
+<div style="color: white; overflow: hidden;">
+    <hr />
+    <div style="float: left;">
+        <dl class="dl-horizontal">
+            <dt>
+            </dt>
+
+            <dd>
+                <img src="@Url.Content(Model.Img)" alt="Image" height="200px" width="200px" />
+            </dd>
+        </dl>
+    </div>
+    <div style="float: left;">
+        <dl class="dl-horizontal">
+            <dt>
+                Beskrivelse
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                Navn
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                Pris
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dd>
+                @if (AuthHelper.IsLoggedIn())
+            {<input id="Button1" type="submit" value="Tilføj Favorit" onclick="location.href='@Url.Action("AddFavorit", "Drink", new { drinkId = @Model.ID, userName = AuthHelper.CurrentUser.Username })'" />}
+            else
+            {<p>Du skal være logget ind før du kan tilføje favorit</p>}
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<h2>Ingredientser</h2>
+<table class="table" style="color: white;">
+    <tr>
+        <th>
+            Navn
+        </th>
+        <th>
+            Procent
+        </th>
+    </tr>
+    @foreach (var item in @Model.Ingredients)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Procent
+            </td>
+        </tr>
+    }
+</table>

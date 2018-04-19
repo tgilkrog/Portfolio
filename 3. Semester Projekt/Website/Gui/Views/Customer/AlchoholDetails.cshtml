@@ -1,0 +1,46 @@
+﻿@model Gui.MenucardServiceRef.MenuCard
+
+<h2>@Model.Customer.CusName</h2>
+
+<div style="color:white;">
+    <h4>Menu</h4>
+    <hr />
+    @using (Html.BeginForm("SearchMenucard", "Customer", FormMethod.Post))
+    {
+        <input type="text" name="text" value="" />
+        <input type="hidden" name="id" value="@Model.Customer.ID" />
+        <input type="submit" id="sumbitText" value="Søg" />
+    }
+    <dl class="dl-horizontal">
+        @foreach (Gui.MenucardServiceRef.Alchohol a in Model.alchohols)
+        {
+            <dt>
+
+            </dt>
+            <dd>
+                <img src="@Url.Content(a.Img)" alt="" height="200px" width="auto" />
+            </dd>
+            <dt>
+                Name
+            </dt>
+            <dd>
+                @a.Name
+            </dd>
+            <dt>
+                Procent
+            </dt>
+            <dd>
+                @a.Procent
+            </dd>
+            <dt>
+
+            </dt>
+            <dd>
+                <input id="Button1" type="submit" value="Tilføj til kurven" onclick="location.href='@Url.Action("Create", "Drink", new { alcId = a.ID, cusID = Model.Customer.ID })'" />
+            </dd>
+        }
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Tilbage til listen", "Index")
+</p>

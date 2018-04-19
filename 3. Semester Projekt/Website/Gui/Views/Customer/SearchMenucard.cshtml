@@ -1,0 +1,126 @@
+﻿@model Gui.MenucardServiceRef.MenuCard
+@using Gui.CustomerServiceRef
+@using Gui.DrinkServiceRef
+@using Gui.Helpers
+
+<h2>@Model.Customer.CusName</h2>
+
+<div style="color:white;">
+    <h4>MenuCard</h4>
+    <hr />
+    @using (Html.BeginForm("SearchMenucard", "Customer", FormMethod.Post))
+    {
+        <input type="text" name="text" value="" />
+        <input type="hidden" name="id" value="@Model.Customer.ID" />
+        <input type="submit" id="sumbitText" value="Søg" />
+    }
+    <dl class="dl-horizontal">
+        <h2>Drinks</h2>
+        <table style="margin-left:50px;">
+            @foreach (Gui.MenucardServiceRef.Drink d in Model.Drinks)
+            {
+                <tr>
+                    <th>
+                        <h3>@d.Name</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th width="270px" rowspan="3">
+                        <a href="@Url.Action("Details", "Drink", new { drinkId = d.ID })"><img src="@Url.Content(d.Img)" alt="" height="200px" width="auto" /></a>
+                    </th>
+                    <td valign="top">
+                        @d.Description
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        Pris: @d.Price dkk.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom">
+                        @if (AuthHelper.IsLoggedIn())
+                        {<input id="Button1" type="submit" value="Add To Cart" onclick="location.href='@Url.Action("Create", "Drink", new { drinkId = d.ID, cusID = Model.Customer.ID, userName = AuthHelper.CurrentUser.Username })'" />}
+                        else
+                        {<p>Du skal være logget ind før du kan købe</p>}
+                        @*<input id="Button1" type="submit" value="Add To Cart" onclick="location.href='@Url.Action("Create", "Drink", new { drinkId = d.ID, cusID = Model.Customer.ID })'" />*@
+                        <input id="btnDetails" type="button" value="Details" onclick="location.href='@Url.Action("Details", "Drink", new { drinkId = d.ID })'" />
+                    </td>
+                </tr>
+            }
+        </table>
+        <hr />
+
+        <h2>Alkohol</h2>
+        <table style="margin-left: 50px;">
+            @foreach (Gui.MenucardServiceRef.Alchohol d in Model.alchohols)
+            {
+                <tr>
+                    <th>
+                        <h3>@d.Name</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th width="270px" rowspan="3">
+                        <a href="@Url.Action("AlchoholDetails", "Drink", new { drinkId = d.ID })"><img src="@Url.Content(d.Img)" alt="" height="200px" width="auto" /></a>
+                    </th>
+                    <td valign="top">
+                        Procent: @d.Procent
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        Pris: @d.Price dkk.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom">
+                        @if (AuthHelper.IsLoggedIn())
+                        {<input id="Button1" type="submit" value="Add To Cart" onclick="location.href='@Url.Action("CreateAlchohol", "Drink", new { drinkId = d.ID, cusID = Model.Customer.ID, userName = AuthHelper.CurrentUser.Username })'" />}
+                        else
+                        {<p>Du skal være logget ind før du kan købe</p>}
+                        <input id="btnDetails" type="button" value="Details" onclick="location.href='@Url.Action("AlchoholDetails", "Drink", new { drinkId = d.ID })'" />
+                    </td>
+                </tr>
+            }
+        </table>
+        <hr />
+
+        <h2>Hel Flasker</h2>
+        <table style="margin-left:50px;">
+            @foreach (Gui.MenucardServiceRef.HelFlask d in Model.helflasks)
+            {
+                <tr>
+                    <th>
+                        <h3>@d.Name</h3>
+                    </th>
+                </tr>
+                <tr>
+                    <th width="270px" rowspan="3">
+                        <a href="@Url.Action("HelflaskDetails", "Drink", new { drinkId = d.ID })"><img src="@Url.Content(d.Img)" alt="" height="200px" width="auto" /></a>
+                    </th>
+                    <td valign="top">
+                        Procent: @d.Procent
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        Pris: @d.Price dkk.
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="bottom">
+                        @if (AuthHelper.IsLoggedIn())
+                        {<input id="Button1" type="submit" value="Add To Cart" onclick="location.href='@Url.Action("CreateHelflask", "Drink", new { drinkId = d.ID, cusID = Model.Customer.ID, userName = AuthHelper.CurrentUser.Username })'" />}
+                        else
+                        {<p>Du skal være logget ind før du kan købe</p>}
+                        <input id="btnDetails" type="button" value="Details" onclick="location.href='@Url.Action("HelflaskDetails", "Drink", new { drinkId = d.ID })'" />
+                    </td>
+                </tr>
+            }
+        </table>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

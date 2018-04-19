@@ -1,0 +1,127 @@
+﻿@model dynamic
+    @using Gui.OrderServiceRef;
+    @using Gui.UserServiceRef;
+    @using Gui.WalletServiceRef;
+    @using Gui.Helpers;
+
+<h1 style="color:white;">Brugernavn: @Model.User.UserName</h1>
+
+@{ 
+    WalletServiceClient wClient = new WalletServiceClient();
+}
+
+<div style="color: white;">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Fornavn
+        </dt>
+
+        <dd>
+            @Model.User.FirstName
+        </dd>
+        <dt>
+            Efternavn
+        </dt>
+
+        <dd>
+            @Model.User.LastName
+        </dd>
+
+        <dt>
+            Fødselsdag
+        </dt>
+
+        <dd>
+            @Model.User.Birthday.ToShortDateString()
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Model.User.Email
+        </dd>
+
+        <dt>
+            Telefon
+        </dt>
+
+        <dd>
+            @Model.User.Phone
+        </dd>
+        
+        <dt>
+            Køn
+        </dt>
+
+        <dd>
+            @Model.User.Gender
+        </dd>
+        <dt>
+            Digital Tegnebog
+        </dt>
+        <dd>
+            @if (wClient.getWalletByUsername(AuthHelper.CurrentUser.Username) == null) {<p>0</p>}
+            else {<p>@wClient.getWalletByUsername(AuthHelper.CurrentUser.Username).Balance DKK.</p>}
+        </dd>
+    </dl>
+    <p>
+        <input id="btnDetails" type="button" value="Digital Tegnebog" onclick="location.href='@Url.Action("WalletDetails", new { id = Model.User.ID })'" />
+    </p>
+    <h2>Favoritter</h2>
+    @foreach(var drink in Model.User.FavoritesDrinks)
+    {
+        <table>
+            <tr>
+                <td>
+                    <img src="@Url.Content(drink.Img)" alt="Image" height="100px" width="150px" />
+                </td>
+                <td>
+                    @drink.Name
+                </td>
+            </tr>
+        </table>
+    }
+</div>
+<div style="color:white;">
+    <h2>Orders</h2>
+    <table class="table">
+        @foreach(var order in @Model.Order)
+        {
+            <tr>
+                <th>
+                    Dato
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Bar navn
+                </th>
+                <th>
+                     Total Pris
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    @order.Date
+                </td>
+               <td>
+                   @order.Status
+               </td>
+                <td>
+                    @order.Customer.CusName
+                </td>
+                <td>
+                    @order.TotalPrice
+                </td>
+                <td>
+                    <input id="btnDetails" type="button" value="Detaljer" onclick="location.href='@Url.Action("Details", "Order", new { id = @order.ID })'" />
+                    <input id="btnDelete" type="button" value="Slet Ordre" onclick="location.href='@Url.Action("DeleteOrder", "Order", new { ID = @order.ID })'" />
+                </td>
+            </tr>
+        }
+    </table>
+</div>

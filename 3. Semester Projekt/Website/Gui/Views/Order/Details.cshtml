@@ -1,0 +1,92 @@
+﻿@model dynamic
+@using Gui.OrderServiceRef;
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Order Detaljer</h2>
+
+<div style="color: white;">
+     @if(Model.Order.Status.Equals("Incomplete")){<input id="Button1" type="button" value="Fuldføre Order" onclick="location.href='@Url.Action("CompleteOrder", "Order", new { id = Model.Order.ID })'" /> }
+    <input id="Button1" type="button" value="Slet Ordre" onclick="location.href='@Url.Action("DeleteOrder", "Order", new { id = Model.Order.ID })'" />
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Total Pris
+        </dt>
+
+        <dd>
+            @Model.Order.TotalPrice
+        </dd>
+
+        <dt>
+            Tilbud
+        </dt>
+
+        <dd>
+            @Model.Order.Discount
+        </dd>
+
+        <dt>
+            Status
+        </dt>
+
+        <dd>
+            @Model.Order.Status
+        </dd>
+
+        <dt>
+            Dato
+        </dt>
+
+        <dd>
+            @Model.Order.Date
+        </dd>
+    </dl>
+
+    <hr/>
+
+    <table class="table" style="color: white;">
+        <h4>Ting i kurven</h4>
+        <tr>
+            <th>
+               Antal
+            </th>
+            <th>
+                Pris ialt
+            </th>
+            <th>
+                Drink
+            </th>
+        </tr>
+
+        @foreach (var item in @Model.OrderLines)
+        {
+            <tr>
+                <td>
+                    @if(Model.Order.Status.Equals("Incomplete")){
+                    using (Html.BeginForm("EditAmount", "Order", FormMethod.Post))
+                    {
+                        <input type="hidden" name="id" value="@item.ID" />
+                        <input type="hidden" name="orderID" value="@Model.Order.ID" />
+                        <input type="text" name="text" value="@item.Amount" style="width:30px;"/>
+                        <input type="submit" id="sumbitText" value="Ændre antal" />
+                    }
+                    }
+                    else{ @item.Amount }
+                </td>
+                <td>
+                    @item.TotalPrice
+                </td>
+                <td>
+                    @item.Drink.Name
+                </td>
+                <td>
+                    @if(Model.Order.Status.Equals("Incomplete")){<input id="btnDelete" type="button" value="Slet" onclick="location.href='@Url.Action("Delete", "Order", new {type = @item.Drink.GetType().ToString(), orderlineID = item.ID, id = Model.Order.ID })'" /> }                    
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

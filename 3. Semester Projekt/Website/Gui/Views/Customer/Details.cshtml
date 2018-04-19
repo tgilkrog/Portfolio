@@ -1,0 +1,196 @@
+﻿@model Gui.MenucardServiceRef.MenuCard
+    @using Gui.Helpers
+    @using Gui.StorageServiceRef;
+
+
+@{
+    ViewBag.Title = "Index";
+    StorageServiceClient sClient = new StorageServiceClient();
+}
+
+<h2>@Model.Customer.CusName</h2>
+
+<div style="color:white;">
+    <h4>MenuKort</h4>
+    <hr />
+    @using (Html.BeginForm("SearchMenucard", "Customer", FormMethod.Post))
+    {
+        <input type="text" name="text" value="" />
+        <input type="hidden" name="id" value="@Model.Customer.ID"/>
+        <input type="submit" id="sumbitText" value="Søg" />
+    }
+    <dl class="dl-horizontal">
+
+        <h2>Drinks</h2>
+        <table style="margin-left:50px;">
+            @foreach (Gui.MenucardServiceRef.Drink d in Model.Drinks)
+            {
+            <tr>
+                <th>
+                    <h3>@d.Name</h3>
+                </th>
+            </tr>
+            <tr>
+                <th width="270px" rowspan="3">
+                    <a href="@Url.Action("Details", "Drink", new { drinkId = d.ID })"><img src="@Url.Content(d.Img)" alt="" height="200px" width="auto" /></a>
+                </th>
+                <td valign="top">
+                    @d.Description
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    Pris: @d.Price dkk. <br />
+                    Antal tilbage; @sClient.getStorageByDrinkAndStorage(d.ID, Model.Customer.ID).Amount;
+                </td>
+            </tr>
+            <tr>
+                <td valign="bottom">
+                    @if (AuthHelper.IsLoggedIn())
+                    {
+                        if (sClient.getStorageByDrinkAndStorage(d.ID, Model.Customer.ID) == null ||
+                            sClient.getStorageByDrinkAndStorage(d.ID, Model.Customer.ID).Amount <= 0)
+                        {
+                            <p>UDSOLGT!</p>
+                        }
+                        else
+                        {
+                            using (Html.BeginForm("Create", "Drink", FormMethod.Post))
+                            {
+                                    <input type="hidden" name="drinkId" value="@d.ID" />
+                                    <input type="hidden" name="cusID" value="@Model.Customer.ID" />
+                                    <input type="text" name="amount" value="" style="width:30px;" />
+                                    <input type="hidden" name="UserName" value="@AuthHelper.CurrentUser.Username" />
+                                    <input type="submit" id="sumbitText" value="Tilføj" /> 
+                                    <input id="btnDetails" type="button" value="Detaljer" onclick="location.href='@Url.Action("Details", "Drink", new { drinkId = d.ID })'" />
+                            }
+                        }
+                    }
+                    else
+                    {
+                        <p>Du skal være logget ind før du kan købe</p>
+                        <input id = "btnDetails" type = "button" value = "Detaljer" onclick = "location.href='@Url.Action("Details", "Drink", new { drinkId = d.ID })'" />
+                    }
+
+                </td>
+            </tr>
+            }
+        </table>
+        <hr />
+
+        <h2>Alkohol</h2>
+        <table style="margin-left: 50px;">
+            @foreach (Gui.MenucardServiceRef.Alchohol d in Model.alchohols)
+            {
+            <tr>
+                <th>
+                    <h3>@d.Name</h3>
+                </th>
+            </tr>
+            <tr>
+                <th width="270px" rowspan="3">
+                    <a href="@Url.Action("AlchoholDetails", "Drink", new { drinkId = d.ID })"><img src="@Url.Content(d.Img)" alt="" height="200px" width="auto" /></a>
+                </th>
+                <td valign="top">
+                    Procent: @d.Procent
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    Pris: @d.Price dkk. <br />
+                    Antal tilbage; @sClient.getAlchoholStorageByDrinkAndStorage(d.ID, Model.Customer.ID).Amount;
+                </td>
+            </tr>
+            <tr>
+                <td valign="bottom">
+                    @if (AuthHelper.IsLoggedIn())
+                    {
+                        if (sClient.getAlchoholStorageByDrinkAndStorage(d.ID, Model.Customer.ID) == null ||
+                            sClient.getAlchoholStorageByDrinkAndStorage(d.ID, Model.Customer.ID).Amount <= 0)
+                        {
+                            <p>UDSOLGT!</p>
+                        }
+                        else
+                        {
+                            using (Html.BeginForm("CreateAlchohol", "Drink", FormMethod.Post))
+                            {
+                                // int amount, int drinkId, int cusID, string UserName;
+                                <input type="hidden" name="drinkId" value="@d.ID" />
+                                    <input type="hidden" name="cusID" value="@Model.Customer.ID" />
+                                    <input type="text" name="amount" value="" style="width:30px;" />
+                                    <input type="hidden" name="UserName" value="@AuthHelper.CurrentUser.Username" />
+                                    <input type="submit" id="sumbitText" value="Tilføj" />
+                                    <input id="btnDetails" type="button" value="Detaljer" onclick="location.href='@Url.Action("AlchoholDetails", "Drink", new { drinkId = d.ID })'" />
+                            }
+                        }
+                    }
+                    else
+                    {
+                        <p>Du skal være logget ind før du kan købe</p>
+                        <input id="btnDetails" type="button" value="Detaljer" onclick="location.href='@Url.Action("AlchoholDetails", "Drink", new { drinkId = d.ID })'" />
+                    }
+                 </td>
+            </tr>
+        }
+        </table>
+        <hr />
+
+        <h2>Hel Flasker</h2>
+        <table style="margin-left:50px;">
+        @foreach (Gui.MenucardServiceRef.HelFlask d in Model.helflasks)
+        {
+            <tr>
+                <th>
+                    <h3>@d.Name</h3>
+                </th>
+            </tr>
+            <tr>
+                <th width="270px" rowspan="3">
+                    <a href="@Url.Action("HelflaskDetails", "Drink", new { drinkId = d.ID })"><img src="@Url.Content(d.Img)" alt="" height="200px" width="auto" /></a>
+                </th>
+                <td valign="top">
+                    Procent: @d.Procent
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    Pris: @d.Price dkk. <br />
+                    Antal tilbage; @sClient.getHelflaskStorageByHelflaskAndStorage(d.ID, Model.Customer.ID).Amount;
+                </td>
+            </tr>
+            <tr>
+                <td valign="bottom">
+                    @if (AuthHelper.IsLoggedIn())
+                    {
+                        if (sClient.getHelflaskStorageByHelflaskAndStorage(d.ID, Model.Customer.ID) == null ||
+                            sClient.getHelflaskStorageByHelflaskAndStorage(d.ID, Model.Customer.ID).Amount <= 0)
+                        {
+                            <p>UDSOLGT!</p>
+                        }
+                        else
+                        {
+                            using (Html.BeginForm("CreateHelflask", "Drink", FormMethod.Post))
+                            {
+                                <input type="hidden" name="drinkId" value="@d.ID" />
+                                <input type="hidden" name="cusID" value="@Model.Customer.ID" />
+                                <input type="text" id="txtAmount" name="amount" value="" style="width:30px;" />
+                                <input type="hidden" name="UserName" value="@AuthHelper.CurrentUser.Username" />
+                                <input type="submit" id="sumbitText" value="Tilføj" />
+                                <input id="btnDetails" type="button" value="Detaljer" onclick="location.href='@Url.Action("HelflaskDetails", "Drink", new { drinkId = d.ID })'" />
+                            }
+                        }
+                    }
+                    else
+                    {
+                        <p> Du skal være logget ind før du kan købe</p>
+                        <input id = "btnDetails" type = "button" value = "Detaljer" onclick = "location.href='@Url.Action("HelflaskDetails", "Drink", new { drinkId = d.ID })'" />
+                    }
+                </td>
+            </tr>
+        }
+        </table>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Tilbage til listen", "Findbar", "Home")
+</p>

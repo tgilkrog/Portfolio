@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WalletService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ModelLayer" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWalletService_CreateWallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWallet" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_CreateWallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetWallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWallet" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetWallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetAllWallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWallet" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetAllWallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_UpdateBalanceByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBalanceByUserId" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_UpdateBalanceByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBalanceByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_getWalletByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:getWalletByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IWalletService_getWalletByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getWalletByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWalletService">
+    <wsdl:operation name="CreateWallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/CreateWallet" message="tns:IWalletService_CreateWallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/CreateWalletResponse" message="tns:IWalletService_CreateWallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/GetWallet" message="tns:IWalletService_GetWallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/GetWalletResponse" message="tns:IWalletService_GetWallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/GetAllWallet" message="tns:IWalletService_GetAllWallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/GetAllWalletResponse" message="tns:IWalletService_GetAllWallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBalanceByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/UpdateBalanceByUserId" message="tns:IWalletService_UpdateBalanceByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/UpdateBalanceByUserIdResponse" message="tns:IWalletService_UpdateBalanceByUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/GetUserById" message="tns:IWalletService_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/GetUserByIdResponse" message="tns:IWalletService_GetUserById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getWalletByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWalletService/getWalletByUsername" message="tns:IWalletService_getWalletByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWalletService/getWalletByUsernameResponse" message="tns:IWalletService_getWalletByUsername_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWalletService" type="tns:IWalletService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateWallet">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/CreateWallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWallet">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/GetWallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWallet">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/GetAllWallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBalanceByUserId">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/UpdateBalanceByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/GetUserById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWalletByUsername">
+      <soap:operation soapAction="http://tempuri.org/IWalletService/getWalletByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WalletService">
+    <wsdl:port name="BasicHttpBinding_IWalletService" binding="tns:BasicHttpBinding_IWalletService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WCF/WalletService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

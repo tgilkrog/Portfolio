@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FavoritesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF/FavoritesService/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF/FavoritesService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/WCF/FavoritesService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ModelLayer" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFavoritesService_createFavorites_InputMessage">
+    <wsdl:part name="parameters" element="tns:createFavorites" />
+  </wsdl:message>
+  <wsdl:message name="IFavoritesService_createFavorites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createFavoritesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFavoritesService_GetFavoritesByUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoritesByUserID" />
+  </wsdl:message>
+  <wsdl:message name="IFavoritesService_GetFavoritesByUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoritesByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFavoritesService_GetAllDrinksByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDrinksByUser" />
+  </wsdl:message>
+  <wsdl:message name="IFavoritesService_GetAllDrinksByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDrinksByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFavoritesService_addDrink_InputMessage">
+    <wsdl:part name="parameters" element="tns:addDrink" />
+  </wsdl:message>
+  <wsdl:message name="IFavoritesService_addDrink_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addDrinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFavoritesService_AddAlchohol_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAlchohol" />
+  </wsdl:message>
+  <wsdl:message name="IFavoritesService_AddAlchohol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAlchoholResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFavoritesService_AddHelflask_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHelflask" />
+  </wsdl:message>
+  <wsdl:message name="IFavoritesService_AddHelflask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHelflaskResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFavoritesService">
+    <wsdl:operation name="createFavorites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFavoritesService/createFavorites" message="tns:IFavoritesService_createFavorites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFavoritesService/createFavoritesResponse" message="tns:IFavoritesService_createFavorites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoritesByUserID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFavoritesService/GetFavoritesByUserID" message="tns:IFavoritesService_GetFavoritesByUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFavoritesService/GetFavoritesByUserIDResponse" message="tns:IFavoritesService_GetFavoritesByUserID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDrinksByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFavoritesService/GetAllDrinksByUser" message="tns:IFavoritesService_GetAllDrinksByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFavoritesService/GetAllDrinksByUserResponse" message="tns:IFavoritesService_GetAllDrinksByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addDrink">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFavoritesService/addDrink" message="tns:IFavoritesService_addDrink_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFavoritesService/addDrinkResponse" message="tns:IFavoritesService_addDrink_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAlchohol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFavoritesService/AddAlchohol" message="tns:IFavoritesService_AddAlchohol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFavoritesService/AddAlchoholResponse" message="tns:IFavoritesService_AddAlchohol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHelflask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFavoritesService/AddHelflask" message="tns:IFavoritesService_AddHelflask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFavoritesService/AddHelflaskResponse" message="tns:IFavoritesService_AddHelflask_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFavoritesService" type="tns:IFavoritesService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="createFavorites">
+      <soap:operation soapAction="http://tempuri.org/IFavoritesService/createFavorites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoritesByUserID">
+      <soap:operation soapAction="http://tempuri.org/IFavoritesService/GetFavoritesByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDrinksByUser">
+      <soap:operation soapAction="http://tempuri.org/IFavoritesService/GetAllDrinksByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addDrink">
+      <soap:operation soapAction="http://tempuri.org/IFavoritesService/addDrink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAlchohol">
+      <soap:operation soapAction="http://tempuri.org/IFavoritesService/AddAlchohol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHelflask">
+      <soap:operation soapAction="http://tempuri.org/IFavoritesService/AddHelflask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FavoritesService">
+    <wsdl:port name="BasicHttpBinding_IFavoritesService" binding="tns:BasicHttpBinding_IFavoritesService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WCF/FavoritesService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,54 @@
+﻿@model Gui.DrinkServiceRef.Alchohol
+    @using Gui.Helpers
+
+<h2>@Model.Name</h2>
+<div style="color: white; overflow: hidden;">
+    <hr />
+    <div style="float: left;">
+        <dl class="dl-horizontal">
+            <dt>
+            </dt>
+
+            <dd>
+                <img src="@Url.Content(Model.Img)" alt="Image" height="200px" width="200px" />
+            </dd>
+        </dl>
+    </div>
+    <div style="float:left;">
+        <dl class="dl-horizontal">
+            <dt>
+                Navn
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                Pris
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            <dt>
+                Procent
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Procent)
+            </dd>
+            <dt>
+
+            </dt>
+            <dd>
+                @if (AuthHelper.IsLoggedIn())
+            {<input id="Button1" type="submit" value="Tilføj Favorit" onclick="location.href='@Url.Action("AddAlchohol", "Drink", new { drinkId = @Model.ID, userName = AuthHelper.CurrentUser.Username })'" />}
+            else
+            {<p>Du skal være logget ind før du kan tilføje favorit</p>}
+            </dd>
+
+        </dl>
+    </div>
+</div>

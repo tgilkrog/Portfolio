@@ -1,0 +1,53 @@
+﻿@using Gui.CustomerServiceRef
+
+@{
+    ViewBag.Title = "Index";
+    CustomerServiceClient client = new CustomerServiceClient();
+    ICollection<Gui.CustomerServiceRef.Customer> newList = client.GetAllCustomers();
+}
+
+<h2>Drinkzy</h2>
+<p>På denne webside er til dem  der vil bestille drinks på en nem måde</p>
+<br />
+
+<div id="my-carousel" class="carousel slide" data-ride="carousel" style="width: 600px; height: 300px;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+        @for (int i = 0; i < newList.Count; i++)
+        {
+            <li data-target="#my-carousel" data-slide-to="i"></li>
+        }
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active" style="width: 600px; height: 300px;">
+            <img alt="First slide" src="http://www.mountainjackpot.com/wp-content/uploads/2015/07/Bar-open.jpg">
+        <div class="carousel-caption">
+        </div>
+        </div>
+    @foreach (var item in newList)
+    {
+        <div class="item" style="width: 600px; height: 300px;">
+            <a href="@Url.Action("Details", "Customer", new { id = item.ID })">
+                <img alt="First slide" src="@Url.Content(item.Img)">
+            </a>
+            <div class="carousel-caption">
+                <h3>@item.CusName</h3>
+                <p>@item.Email</p>
+            </div>
+        </div>
+    }
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#my-carousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#my-carousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

@@ -1,0 +1,32 @@
+﻿<Page x:Class="WpfDrinkzy.IngredientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfDrinkzy"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="IngredientPage">
+
+    <Grid>
+        <Button Content="Create" HorizontalAlignment="Left" Margin="457,284,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="CreateIngredient_Click">
+        
+        </Button>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="600,284,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="UpdateIngredient_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="457,339,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="DeleteIngredient_Click" RenderTransformOrigin="0.725,0.233"/>
+        <Label Content="IngredientName" HorizontalAlignment="Left" Margin="356,152,0,0" VerticalAlignment="Top"/>
+        <Label Content="AlkoholProcent" HorizontalAlignment="Left" Margin="361,201,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtIngName" HorizontalAlignment="Left" Height="23" Margin="457,156,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtProcent" HorizontalAlignment="Left" Height="23" Margin="457,201,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <ListView x:Name="IngList" HorizontalAlignment="Left" Height="217" Margin="86,152,0,0" VerticalAlignment="Top" Width="234" SelectionChanged="Changer">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="60"/>
+                    <GridViewColumn Header="%Procent" DisplayMemberBinding="{Binding Procent}" Width="60"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Page>
