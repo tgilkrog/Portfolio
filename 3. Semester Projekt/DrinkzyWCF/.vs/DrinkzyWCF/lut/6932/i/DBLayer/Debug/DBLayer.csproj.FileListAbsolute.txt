@@ -1,0 +1,7 @@
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\b\DBLayer\bin\Debug\DBLayer.dll.config
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\b\DBLayer\bin\Debug\DBLayer.dll
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\b\DBLayer\bin\Debug\DBLayer.pdb
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\DBLayer\Debug\DBLayer.csprojResolveAssemblyReference.cache
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\DBLayer\Debug\DBLayer.csproj.CoreCompileInputs.cache
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\DBLayer\Debug\DBLayer.dll
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\DBLayer\Debug\DBLayer.pdb

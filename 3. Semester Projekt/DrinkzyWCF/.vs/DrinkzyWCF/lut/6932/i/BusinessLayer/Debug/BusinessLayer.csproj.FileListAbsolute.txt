@@ -1,0 +1,6 @@
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\b\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\b\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\BusinessLayer\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\BusinessLayer\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\BusinessLayer\Debug\BusinessLayer.dll
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\BusinessLayer\Debug\BusinessLayer.pdb

@@ -1,0 +1,6 @@
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\b\ModelLayer\bin\Debug\ModelLayer.dll
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\b\ModelLayer\bin\Debug\ModelLayer.pdb
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\ModelLayer\Debug\ModelLayer.csprojResolveAssemblyReference.cache
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\ModelLayer\Debug\ModelLayer.csproj.CoreCompileInputs.cache
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\ModelLayer\Debug\ModelLayer.dll
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\.vs\DrinkzyWCF\lut\0\i\ModelLayer\Debug\ModelLayer.pdb

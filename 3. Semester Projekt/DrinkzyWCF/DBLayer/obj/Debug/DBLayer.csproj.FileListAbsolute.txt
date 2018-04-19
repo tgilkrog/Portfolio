@@ -1,0 +1,54 @@
+C:\Users\tgilk\source\repos\dongtech\DBLayer\bin\Debug\DBLayer.dll.config
+C:\Users\tgilk\source\repos\dongtech\DBLayer\bin\Debug\DBLayer.dll
+C:\Users\tgilk\source\repos\dongtech\DBLayer\bin\Debug\DBLayer.pdb
+C:\Users\tgilk\source\repos\dongtech\DBLayer\bin\Debug\ModelLayer.dll
+C:\Users\tgilk\source\repos\dongtech\DBLayer\bin\Debug\ModelLayer.pdb
+C:\Users\tgilk\source\repos\dongtech\DBLayer\obj\Debug\DBLayer.csprojResolveAssemblyReference.cache
+C:\Users\tgilk\source\repos\dongtech\DBLayer\obj\Debug\DBLayer.csproj.CoreCompileInputs.cache
+C:\Users\tgilk\source\repos\dongtech\DBLayer\obj\Debug\DBLayer.dll
+C:\Users\tgilk\source\repos\dongtech\DBLayer\obj\Debug\DBLayer.pdb
+C:\Users\pgilk\source\repos\dongtech\DBLayer\bin\Debug\DBLayer.dll.config
+C:\Users\pgilk\source\repos\dongtech\DBLayer\bin\Debug\DBLayer.dll
+C:\Users\pgilk\source\repos\dongtech\DBLayer\bin\Debug\DBLayer.pdb
+C:\Users\pgilk\source\repos\dongtech\DBLayer\bin\Debug\ModelLayer.dll
+C:\Users\pgilk\source\repos\dongtech\DBLayer\bin\Debug\ModelLayer.pdb
+C:\Users\pgilk\source\repos\dongtech\DBLayer\obj\Debug\DBLayer.csprojResolveAssemblyReference.cache
+C:\Users\pgilk\source\repos\dongtech\DBLayer\obj\Debug\DBLayer.csproj.CoreCompileInputs.cache
+C:\Users\pgilk\source\repos\dongtech\DBLayer\obj\Debug\DBLayer.dll
+C:\Users\pgilk\source\repos\dongtech\DBLayer\obj\Debug\DBLayer.pdb
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\projektmappe\dongtech\DBLayer\bin\Debug\DBLayer.dll.config
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\projektmappe\dongtech\DBLayer\bin\Debug\DBLayer.dll
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\projektmappe\dongtech\DBLayer\bin\Debug\DBLayer.pdb
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\projektmappe\dongtech\DBLayer\bin\Debug\ModelLayer.dll
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\projektmappe\dongtech\DBLayer\bin\Debug\ModelLayer.pdb
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\projektmappe\dongtech\DBLayer\obj\Debug\DBLayer.csprojResolveAssemblyReference.cache
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\projektmappe\dongtech\DBLayer\obj\Debug\DBLayer.csproj.CoreCompileInputs.cache
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\projektmappe\dongtech\DBLayer\obj\Debug\DBLayer.dll
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\projektmappe\dongtech\DBLayer\obj\Debug\DBLayer.pdb
+C:\Users\pgilk\Documents\GIT Folder\Projekt\dongtech\DBLayer\bin\Debug\DBLayer.dll.config
+C:\Users\pgilk\Documents\GIT Folder\Projekt\dongtech\DBLayer\bin\Debug\DBLayer.dll
+C:\Users\pgilk\Documents\GIT Folder\Projekt\dongtech\DBLayer\bin\Debug\DBLayer.pdb
+C:\Users\pgilk\Documents\GIT Folder\Projekt\dongtech\DBLayer\bin\Debug\ModelLayer.dll
+C:\Users\pgilk\Documents\GIT Folder\Projekt\dongtech\DBLayer\bin\Debug\ModelLayer.pdb
+C:\Users\pgilk\Documents\GIT Folder\Projekt\dongtech\DBLayer\obj\Debug\DBLayer.csprojResolveAssemblyReference.cache
+C:\Users\pgilk\Documents\GIT Folder\Projekt\dongtech\DBLayer\obj\Debug\DBLayer.csproj.CoreCompileInputs.cache
+C:\Users\pgilk\Documents\GIT Folder\Projekt\dongtech\DBLayer\obj\Debug\DBLayer.dll
+C:\Users\pgilk\Documents\GIT Folder\Projekt\dongtech\DBLayer\obj\Debug\DBLayer.pdb
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\DongtechProjekt\projektmappe\dongtech\DBLayer\bin\Debug\DBLayer.dll.config
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\DongtechProjekt\projektmappe\dongtech\DBLayer\bin\Debug\DBLayer.dll
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\DongtechProjekt\projektmappe\dongtech\DBLayer\bin\Debug\DBLayer.pdb
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\DongtechProjekt\projektmappe\dongtech\DBLayer\bin\Debug\ModelLayer.dll
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\DongtechProjekt\projektmappe\dongtech\DBLayer\bin\Debug\ModelLayer.pdb
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\DongtechProjekt\projektmappe\dongtech\DBLayer\obj\Debug\DBLayer.csprojResolveAssemblyReference.cache
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\DongtechProjekt\projektmappe\dongtech\DBLayer\obj\Debug\DBLayer.csproj.CoreCompileInputs.cache
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\DongtechProjekt\projektmappe\dongtech\DBLayer\obj\Debug\DBLayer.dll
+C:\Users\tgilk\Desktop\UCN\TestTilGruppe5\DongtechProjekt\projektmappe\dongtech\DBLayer\obj\Debug\DBLayer.pdb
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\DBLayer\bin\Debug\DBLayer.dll.config
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\DBLayer\bin\Debug\DBLayer.dll
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\DBLayer\bin\Debug\DBLayer.pdb
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\DBLayer\bin\Debug\ModelLayer.dll
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\DBLayer\bin\Debug\ModelLayer.pdb
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\DBLayer\obj\Debug\DBLayer.csprojResolveAssemblyReference.cache
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\DBLayer\obj\Debug\DBLayer.csproj.CoreCompileInputs.cache
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\DBLayer\obj\Debug\DBLayer.dll
+C:\Users\tgilk\Desktop\UCN\Semester 3\Gruppe 5\Git\Projekt Mappe\DrinkzyWCF\DBLayer\obj\Debug\DBLayer.pdb
