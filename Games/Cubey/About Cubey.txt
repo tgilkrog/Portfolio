@@ -1,0 +1,8 @@
+Controls:
+	A to move left
+	D to Move Right
+	W to Jump
+
+Avoid hitting the red blocks.
+Hit the yellow ball in certain levels to be able to hit blocks
+for a certain amount of time.

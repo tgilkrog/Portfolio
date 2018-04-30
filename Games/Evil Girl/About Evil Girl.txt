@@ -1,10 +1,10 @@
 Controls:
-	a to move left
-	b to move right
-	w to jump
-	shift to sprint(when level 2)
-	space to fly(when level 3)
-	esc to pause the game
+	A to move left
+	D to move right
+	W to jump
+	Shift to sprint(when level 2)
+	Space to fly(when level 3)
+	Esc to pause the game
 
 Visual Assets from: 
 	opengameart2d.com
