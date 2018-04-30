@@ -2,6 +2,7 @@ Controls:
 	A to move left
 	D to Move Right
 	W to Jump
+	ALT-F4 to exit game during play
 
 Avoid hitting the red blocks.
 Hit the yellow ball in certain levels to be able to hit blocks

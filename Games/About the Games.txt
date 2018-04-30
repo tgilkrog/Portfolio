@@ -1,0 +1,3 @@
+All the games are build for Windows.
+they are all zipped, and you need to extract them to a chosne destination
+befor you can play them.
