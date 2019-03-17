@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=OrderContainer()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ OrderContainer\r\n\ @constructor\r\n
+comment1.params=
+comment1.target=OrderContainer\ getInstance()
+comment2.params=o
+comment2.target=void\ addOrder(Order)
+comment2.text=\r\n\ Method\ for\ adding\ an\ Order\ to\ the\ orders\ arraylist\r\n\ @addOrder\r\n
+comment3.params=id
+comment3.target=Order\ getOrder(int)
+comment3.text=\r\n\ Method\ for\ searching\ Order\ in\ the\ orders\ arraylist,\ return\ the\ Order\r\n\ @getOrder\r\n
+comment4.params=id
+comment4.target=void\ deleteOrder(int)
+comment4.text=\r\n\ Method\ for\ deleting\ an\ Order,\ with\ the\ value\ from\ the\ parameter\r\n\ @deleteOrder\r\n
+numComments=5

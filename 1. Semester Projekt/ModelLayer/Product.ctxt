@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=barcode\ name\ description\ price\ height\ weight
+comment0.target=Product(java.lang.String,\ java.lang.String,\ java.lang.String,\ double,\ double,\ double)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Product\r\n\ @constructor\r\n
+comment1.params=
+comment1.target=java.lang.String\ getBarcode()
+comment1.text=\r\n\ Get\ and\ Set\ methods\r\n\ @Gets&Sets\r\n
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=
+comment3.target=java.lang.String\ getDescription()
+comment4.params=
+comment4.target=double\ getPrice()
+comment5.params=
+comment5.target=double\ getHeight()
+comment6.params=
+comment6.target=double\ getWeight()
+numComments=7

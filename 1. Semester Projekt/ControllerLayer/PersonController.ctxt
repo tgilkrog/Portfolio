@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=PersonController()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ PersonController\r\n\ @constructor\r\n
+comment1.params=id\ name\ address\ phone\ email
+comment1.target=void\ CreateCustomer(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Method\ for\ creating\ a\ Customer,\ with\ the\ values\ from\ the\ paramters,\ and\ then\ calls\ a\ method\ from\ customer\ container\r\n\ @createCustomer\r\n
+comment2.params=id\ name\ address\ phone\ email\ workStatus\ wages
+comment2.target=void\ CreateCoworker(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ double)
+comment2.text=\r\n\ Method\ for\ creating\ a\ Coworker,\ with\ the\ values\ from\ the\ paramters,\ and\ then\ calls\ a\ method\ from\ coworker\ container\r\n\ @createCoworker\r\n
+comment3.params=id
+comment3.target=ModelLayer.Customer\ getCustomer(int)
+comment3.text=\r\n\ Method\ for\ returning\ a\ Customer\ with\ the\ value\ in\ the\ paramter,\ calls\ a\ method\ from\ the\ customer\ container\r\n\ @getCustomer\r\n
+comment4.params=id
+comment4.target=ModelLayer.Coworker\ getCoworker(int)
+comment4.text=\r\n\ Method\ for\ returning\ a\ Coworker\ with\ the\ value\ in\ the\ paramter,\ calls\ a\ method\ from\ the\ coworker\ container\r\n\ @getCoworker\r\n
+numComments=5

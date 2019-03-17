@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CustomerContainer()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ CustomerContainer\r\n\ @constructor\r\n
+comment1.params=
+comment1.target=CustomerContainer\ getInstance()
+comment2.params=cus
+comment2.target=void\ addCustomer(Customer)
+comment2.text=\r\n\ Method\ for\ adding\ a\ customer\ to\ the\ customers\ arraylist\r\n\ @addCustomer\r\n
+comment3.params=id
+comment3.target=Customer\ getCustomer(int)
+comment3.text=\r\n\ Method\ for\ searching\ Customer\ in\ the\ customers\ arraylist,\ returns\ a\ customer\r\n\ @getCustomer\r\n
+numComments=4

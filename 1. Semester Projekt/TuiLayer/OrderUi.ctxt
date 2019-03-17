@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=OrderUi()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ OrderMenu\r\n\ @constructor\r\n
+comment1.params=
+comment1.target=void\ CreateOrder()
+comment1.text=\r\n\ Method\ for\ creating\ an\ Order,\ with\ given\ attributes\r\n\ @createOrder\r\n
+comment2.params=
+comment2.target=void\ createDelOrder()
+comment2.text=\r\n\ Method\ for\ creating\ a\ DelOrder,\ by\ finding\ an\ Order,\ and\ give\ attributes\r\n\ @createDelOrder\r\n
+comment3.params=
+comment3.target=void\ getOrder()
+comment3.text=\r\n\ Method\ for\ printing\ a\ specific\ Order,\ with\ given\ ID\r\n\ @getOrder\r\n
+comment4.params=
+comment4.target=void\ deleteOrder()
+comment4.text=\r\n\ Method\ for\ Deleting\ an\ Order,\ with\ given\ ID\r\n\ @deleteOrder\r\n
+numComments=5

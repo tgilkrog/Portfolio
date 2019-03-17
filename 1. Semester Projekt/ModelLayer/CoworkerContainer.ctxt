@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CoworkerContainer()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ CoworkerContainer\r\n\ @constructor\r\n
+comment1.params=
+comment1.target=CoworkerContainer\ getInstance()
+comment2.params=cow
+comment2.target=void\ addCoworker(Coworker)
+comment2.text=\r\n\ Method\ for\ adding\ a\ Coworker\ to\ the\ coworkers\ arraylist\r\n\ @addCoworker\r\n
+comment3.params=id
+comment3.target=Coworker\ getCoworker(int)
+comment3.text=\r\n\ Method\ for\ searching\ a\ coworker\ in\ the\ coworkers\ arraylist,\ returns\ a\ coworker\r\n\ @getCoworker\r\n
+numComments=4

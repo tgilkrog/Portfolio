@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=InventoryController()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ InventoryController\r\n\ @constructor\r\n
+comment1.params=barcode\ amount\ max\ min\ placement
+comment1.target=void\ createInventory(java.lang.String,\ int,\ int,\ int,\ java.lang.String)
+comment1.text=\r\n\ Method\ for\ creating\ an\ Inventory,\ with\ given\ values\ from\ the\ parameters,\ calls\ a\ method\ from\ Inventory\ Container\r\n\ @createInventory\r\n
+comment2.params=barcode
+comment2.target=ModelLayer.Inventory\ getInventory(java.lang.String)
+comment2.text=\r\n\ Method\ for\ returning\ an\ Inventory\ with\ the\ value\ from\ the\ parameter,\ calls\ a\ method\ from\ Inventory\ container\r\n\ @getInventory\r\n
+comment3.params=
+comment3.target=void\ printInventory()
+comment3.text=\r\n\ Method\ for\ printing\ an\ Inventory,\ calls\ a\ method\ from\ Inventory\ Container\r\n\ @printInventory\r\n
+comment4.params=
+comment4.target=void\ printLowInventory()
+comment4.text=\r\n\ Method\ for\ printing\ product\ with\ low\ amount\ in\ inventory,\ calls\ a\ method\ from\ Inventory\ Container\r\n\ @printLowInventory\r\n
+numComments=5

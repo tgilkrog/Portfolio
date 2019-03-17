@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=product\ amount\ max\ min\ placement
+comment0.target=Inventory(Product,\ int,\ int,\ int,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Inventory\r\n\ @constructor\r\n
+comment1.params=addAmount
+comment1.target=void\ addAmount(int)
+comment1.text=\r\n\ Method\ for\ adding\ to\ the\ amount\r\n\ @addAmount\r\n
+comment2.params=dAmount
+comment2.target=void\ detractAmount(int)
+comment2.text=\r\n\ Method\ for\ detracting\ from\ the\ amount\r\n\ @detractAmount\r\n
+comment3.params=
+comment3.target=int\ getAmount()
+comment3.text=\r\n\ Get\ and\ set\ methods\r\n\ @Gets&Sets\r\n
+comment4.params=
+comment4.target=Product\ getProduct()
+comment5.params=
+comment5.target=int\ getMin()
+comment6.params=
+comment6.target=int\ getMax()
+comment7.params=
+comment7.target=java.lang.String\ getPlacement()
+numComments=8

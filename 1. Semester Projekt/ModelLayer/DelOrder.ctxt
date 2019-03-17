@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=amount\ product\ order
+comment0.target=DelOrder(int,\ Product,\ Order)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ DelOrder\r\n\ @constructor\r\n
+comment1.params=
+comment1.target=Product\ getProduct()
+comment1.text=\r\n\ Get\ and\ Set\ methods\r\n\ @Gets&Sets\r\n
+comment2.params=
+comment2.target=int\ getAmount()
+numComments=3

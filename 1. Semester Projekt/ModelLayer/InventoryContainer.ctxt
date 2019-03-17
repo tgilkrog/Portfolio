@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=
+comment0.target=InventoryContainer()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ InventoryContainer\r\n\ @constructor\r\n
+comment1.params=
+comment1.target=InventoryContainer\ getInstance()
+comment2.params=inv
+comment2.target=void\ addInventory(Inventory)
+comment2.text=\r\n\ Method\ for\ addin\ an\ Inventory\ to\ the\ inventories\ arraylist\r\n\ @addInventory\r\n
+comment3.params=barcode
+comment3.target=Inventory\ getInventory(java.lang.String)
+comment3.text=\r\n\ Method\ for\ searching\ for\ prodct\ in\ the\ inventories\ arraylist,\ return\ inventory\r\n\ @getInventory\r\n
+comment4.params=
+comment4.target=void\ printInventory()
+comment4.text=\r\n\ Method\ for\ printing\ product\ and\ inventory\ values\r\n\ @printInventory\r\n
+comment5.params=
+comment5.target=void\ printLowInventory()
+comment5.text=\r\n\ Method\ for\ printing\ product\ with\ low\ amount\ in\ inventory\r\n\ @printLowInventory\r\n
+numComments=6
