@@ -1,0 +1,147 @@
+<div class="customerWrapper">
+
+  <div class="customerTop">
+    <div style="float: left; width:49%;">
+      <table>
+        <tr>
+          <td>
+            <h1>{{customer?.name}}</h1>
+          </td>
+          <td style="padding-left:20px;">
+            <p>
+              Adresse:
+              {{customer?.address}},
+              {{customer?.postal}}
+              {{customer?.city}}.
+            </p>
+          </td>
+        </tr>
+      </table>      
+      <img class="image-rounded" src="{{customer?.image}}" style="width:80%;" />
+    </div>
+    <div style="float:left; width:49%; padding-top:50px; padding-right:20px;">
+      <p>
+        <button *ngIf="cusId == 0" class="btn" (click)="createSubscription(customer?.id)" style="background-color:#E08417;">Abonner</button>
+        {{customer?.subsId.length}} Abonnenter
+      </p>
+      <div *ngIf="id == cusId">
+        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#insertEvent">
+          Opret Begivenhed
+        </button> &nbsp;&nbsp;
+        <button type="button" class="btn btn-sm btn-primary" (click)="insertNews()">Opret nyhed</button>
+      </div>
+      
+      <h5>Nyheder</h5>
+      <div *ngFor="let news of customer?.news" class="ting">
+        <p data-toggle="modal" data-target="#exampleModal"><i>{{news.date | date}}:</i> {{news.title}} - {{news.description | slice:0:50}}...</p>
+      </div>
+      <br />
+      <h5>Begivenheder</h5>
+      <div *ngFor="let event of customer?.events" class="ting">
+        <p data-toggle="modal" data-target="#eventsModal">
+          <i>{{event.date | date}}:</i> {{event.title}} - {{event.description | slice:0:50}}...
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="menucard">
+      <ul *ngFor="let drink of customer?.menucard.drinks">
+        <li style="float: left; width: 40%;">
+          <img src="{{drink.image}}" height="200" width="150"> 
+        </li>
+        
+        <div style="float: left; width: 60%">
+          <li>
+            <h4>{{drink.name}}</h4>
+          </li>
+          <li>
+            <p>{{drink.description}}</p>
+          </li>
+          <li style="font-size:20px;float:right;padding-top: 60px;">
+            <p style="font-weight:900; color:black;">40 kr.</p>
+          </li>
+          <li>
+            <button class="button2" routerLink="/home/drinks/{{drink.id}}/{{drink.name}}" value="Detaljer">Detaljer</button>
+          </li>
+        </div>
+      </ul>
+  </div>
+
+  <div class="images">
+    <h2>Images</h2>
+    <div style="height: 100px; width: 100%; background-color:aquamarine; margin-bottom:20px;">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for News -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nyheder</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div *ngFor="let news of customer?.news" style="text-align:left;">
+          <p>
+            <i>{{news.date | date}}:</i> {{news.title}} - {{news.description}}.
+          </p><br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Event -->
+<div class="modal fade" id="eventsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Begivenheder</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div *ngFor="let event of customer?.events" style="text-align:left;">
+          <p>
+            <input class="btn btn-warning" type="button" value="Tilmeld" (click)="InsertEventUser(event.id)" />
+            - {{event.numberOfUsers}} Tilmeldt. <br />
+            <i>{{event.date | date}}:</i> {{event.title}} - {{event.description}}.
+          </p><br />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for insert an Event -->
+<div class="modal fade" id="insertEvent" tabindex="-1" role="dialog" aria-labelledby="insertEvent" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Opret en begivenhed</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="eventForm" (ngSubmit)="insertEvent()">
+          <div class="form-group">
+            <label>Titel</label>
+            <input type="text" formControlName="title" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label>Beskrivelse</label>
+            <input type="text" formControlName="description" class="form-control" />
+          </div>
+          <input type="submit" value="Opret Begivenhed">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

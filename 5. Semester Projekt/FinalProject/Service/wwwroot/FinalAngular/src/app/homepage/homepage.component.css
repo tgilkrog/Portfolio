@@ -1,0 +1,91 @@
+h1, h2, h3, h4, p{
+     color: black;
+     padding: 0;
+     margin: 0;
+ }
+
+ ul > li {
+    display: inline-block;
+    zoom:1;
+    *display:inline;
+}
+
+li{
+    width: 392px;
+    height: 100%;
+    background-color: #f1f1f1;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-style: solid;
+    border-color: #595a5f;
+    border-width: 1px;
+    -moz-box-shadow: 0 0 3px #000000;
+    -webkit-box-shadow: 0 0 3px #000000;
+    box-shadow: 0 0 3px #000000;
+}
+
+.wrapper{
+  height: 700px;
+  width: 100%;
+  /*background: url( https://i.ytimg.com/vi/5b5cuNmGqpU/maxresdefault.jpg); */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /*position: absolute;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: grey;*/
+}
+
+.logo{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.content{
+    width: 100%;
+    /*margin-top: 10%;*/
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.pictures {
+  background-color: #E08417;
+  padding-top: 15px;
+  width: 100%;
+  min-height: 283.5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+ /* Style the search field */
+  form input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    width: 40%;
+    background: #f1f1f1;
+  }
+  
+  /* Style the submit button */
+  form button {
+    width: 10%;
+    padding: 10px;
+    background: #536878;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background: #708090;
+  }
+
+.result-wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: 10;
+  position: relative;
+}

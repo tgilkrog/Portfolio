@@ -1,0 +1,49 @@
+.customerWrapper{
+  width: 100%;
+  height: 70px;
+}
+
+.cusImage{
+  float: left;
+  height: 70px;
+}
+
+.cusName{
+  float:left;
+  text-align: left;
+  height: 70px;
+  min-width: 300px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.type{
+  float: left;
+  height: 70px;
+  min-width: 200px;
+  padding-top: 14px;
+}
+
+.cusAddress{
+  float: left;
+  height: 70px;
+  padding-left: 50px;
+  padding-top: 25px;
+}
+
+.menuButton{
+  float:right;
+  height: 70px;
+  width: 150px;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+label{
+  padding-right: 20px;
+  color:aliceblue;
+}
+
+p, h1, h2{
+  color: black;
+}

@@ -1,0 +1,44 @@
+<br />
+<div *ngIf="_route.children.length === 0">
+  <div class="filters">
+    <div>
+      <label>Navn <input class="form-control" type="text" /></label>
+    </div>
+    <div>
+      <label>
+        By <input class="form-control" type="text" #tbCity id="tbCity" />
+      </label>
+      <label>
+        Postnummer <input class="form-control" type="text" #tbPostal id="tbPostal" />
+      </label>
+    </div>
+    <div style="max-width:500px; margin-left: auto; margin-right: auto; padding-right:20px;">
+      <input class="btn btn-block" value="Søg" type="button" (click)="PostalCity(tbPostal.value, tbCity.value)" />
+    </div>
+    <div style="padding-top:10px;">
+      <label class="checkbox-inline" style="padding-right:40px;"><input class="form-check-input" type="checkbox" #gamblingCheckbox id="gamblingCheckbox" (change)="onGamblingChanged(gamblingCheckbox.checked); getTest()">Gambling</label>
+      <label class="checkbox-inline" style="padding-right:40px;"><input class="form-check-input" type="checkbox" #dancingCheckbox id="dancingCheckbox" (change)="onDancingChanged(dancingCheckbox.checked); getTest()">Dans</label>
+      <label class="checkbox-inline" style="padding-right:40px;"><input class="form-check-input" type="checkbox" #foodCheckbox id="foodCheckbox" (change)="onFoodChanged(foodCheckbox.checked); getTest()">Mad</label>
+      <label class="checkbox-inline" style="padding-right:40px;"><input class="form-check-input" type="checkbox" #sleepCheckbox id="sleepCheckbox" (change)="onSleepChanged(sleepCheckbox.checked); getTest()">Overnatte</label>
+    </div>
+  </div>
+
+  <div class="list-group" style="padding-top:20px;">
+    <a class="list-group-item" *ngFor="let customer of filteredList" style="background-color:#E08417;"
+       routerLink="{{customer.value.id}}/{{customer.value.name}}">
+      <div class="customerWrapper">
+        <div class="cusImage"><img height="70" width="120" src="{{customer.value.image}}" /></div>
+        <div class="cusName"><h1>{{customer.value.name}}</h1></div>
+        <div class="type"><h2>{{customer.value.type}}</h2></div>
+        <div class="cusAddress">
+          <p>
+            Address: {{customer.value.address}}, {{customer.value.postal}} {{customer.value.city}}
+          </p>
+        </div>
+        <div><input type="button" class="btn menuButton" value="Vælg Bar" style="background-color:#2C0A0A;" /></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

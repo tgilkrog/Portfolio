@@ -1,0 +1,32 @@
+<div class="login-page">
+  <div class="form">
+    <form class="register-form" id="myDIV" style="display: none;" #userRegistrationForm="ngForm">
+      <h2>Opret Bruger</h2>
+      <input type="text" id="username" placeholder="Navn" #username />
+      <input type="password" id="password" placeholder="Kodeord" #password />
+      <input type="text" id="email" placeholder="Email addresse" #email />
+      <button (click)="createUser(username.value, password.value, email.value); onClickMe()">Opret Bruger</button>
+      <p class="message">Har du allerede en bruger? <a (click)="onClickMe()">Log ind</a></p>
+    </form>
+
+    <form [formGroup]="loginForm" id="myDIV2" style="display: block;" (ngSubmit)="login()">
+      <h2>Log ind</h2>
+      <div class="form-group clearfix" [ngClass]="{ 'has-error': submitted && f.userid.errors }">
+          <input type="text" placeholder="Brugernavn" formControlName="userid" />
+          <div *ngIf="submitted && f.userid.errors" class="help-block">
+            <div *ngIf="f.userid.errors.required">Userid is required</div>
+          </div>
+      </div>
+      <div class="form-group clearfix" [ngClass]="{ 'has-error': submitted && f.password.errors }">
+          <input type="password" placeholder="Kodeord" formControlName="password" />
+          <div *ngIf="submitted && f.password.errors" class="help-block">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+      </div>
+      <div class="col-xs-12 form-group text-right">
+        <button class="btn btn-success" type="submit">Log ind</button>
+        <p class="message">Har du ikke en bruger? <a (click)="onClickMe()">Opret</a></p>
+      </div>
+    </form>
+  </div>
+  </div>

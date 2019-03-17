@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"><img src="../../assets/images/DrinKingTitle.png" height="40" /></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Forside</a>
+      </li>   <li><div class="smallLine"></div></li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home/customers">Bar/Klubber</a>
+      </li>   <li><div class="smallLine"></div></li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home/drinks">Drinks</a>
+      </li>   <li *ngIf="userId === null"><div class="smallLine"></div></li>
+      <li class="nav-item" *ngIf="userId === null">
+        <a class="nav-link" routerLink="/home/login">Log ind/Opret</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item" *ngIf="userId !== null">
+        <h4 routerLink="/home/userpage/{{userId}}/{{username}}">{{username}}</h4>
+      </li>
+      <li class="nav-item" *ngIf="userId !== null" style="padding-left:10px; padding-right:10px;">
+        <button class="btn" style="background-color: #2C0A0A; color:#FFFFFF;" (click)="logout()">Log ud</button>
+      </li>
+      <li>
+        <div *ngIf="location !== '/home'">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Søg på bar">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit" style="background-color:#2C0A0A;">Søg</button>
+        </form>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,43 @@
+<div class="wrapper">
+  <div class="LeftBoks">
+    <div class="info">
+      <h1>{{user?.username}}</h1>
+      <p>
+        {{user?.email}}
+      </p>
+    </div>
+
+    <div class="events">
+      <h2>Tilmeldte Begivenheder</h2>
+      <div *ngFor="let event of eventList">
+        <p>
+          <input type="button" class="btn btn-sm" value="Afmeld" (click)="removeEvent()" />
+          {{event.title}} - {{event.date}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="RightBoks">
+    <div class="favorits">
+      <h1>Abonneret Bar</h1>
+      <ul *ngFor="let subs of user?.subscriptions">
+        <li><h3>{{subs.customer.name}}</h3></li>
+        <a routerLink="/home/customers/{{subs.customer.id}}/{{subs.customer.name}}">
+          <img src="{{subs.customer.image}}" height="100" width="150"></a>
+          <li><h5>Notifiker mig: {{ subs.notification}}</h5></li>
+          <li><button (click)="removeSubscription(subs.id)">Fjern sub</button></li>
+</ul>
+    </div>
+
+    <div class="notiStyle">
+      <h2>Notifikationer</h2>
+      <div *ngFor="let item of user?.notifications">
+        <p>
+          {{item.noteText}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>

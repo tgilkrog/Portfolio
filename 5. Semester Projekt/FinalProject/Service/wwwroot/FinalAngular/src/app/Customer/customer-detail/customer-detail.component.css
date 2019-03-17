@@ -1,0 +1,101 @@
+.customerWrapper{
+  margin-top:20px;
+  width: 100%;
+}
+
+.customerTop{
+  float:left;
+  text-align: left;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.menucard{
+  float: left;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  margin-top: 20px;
+  background: #b36912;
+}
+
+.images {
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+}
+
+i{
+  color: #00d0ff;
+}
+
+.ting i:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+h1, h5{
+  color: #E9E7D1;
+}
+
+h4{
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+
+p {
+  color: #E9E7D1;
+  margin: 0;
+  padding: 0;
+}
+
+.ting p {
+  color: #E9E7D1;
+  margin: 0;
+  padding: 0;
+  cursor:pointer;
+}
+
+.ting p:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #b36912;
+  width: 20%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.button2 {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #2C0A0A;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+ul{
+  float: left;
+  list-style: none;
+  width: 33%;
+  height: 200px;
+  text-align: left;
+}

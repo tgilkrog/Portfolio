@@ -1,0 +1,77 @@
+<div *ngIf="location === '/home' ">
+<div class="wrapper">
+  <div class="logo"><img src="../../assets/images/DrinKingLogov2.png"  width="257" height="320"/></div>
+  <div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-12 col-lg-12">
+          <div class="card card-sm">
+            <div class="card-body row no-gutters align-items-center" style="background-color:#E08417; ">
+              <div class="col-auto" style="padding-right:15px;">
+                <i class="fa fa-search fa-2x"></i>
+              </div>
+              <!--end of col-->
+              <div class="col">
+                <input [formControl]="queryField" type="search" class="form-control form-control-lg form-control-borderless" (keydown)="onKeydown($event)"
+                       (focus)="FocusCheck(true);" (blur)="FocusCheck(false);" id="keyword" placeholder="Find barer, klubber, diskoteker og lign..." autocomplete="off" autofocus />
+              </div>
+              <!--end of col-->
+              <div class="col-auto" style="padding-right:5px;" *ngIf="check">
+                <i class="fa fa-times" (click)="Clear()" style="cursor:pointer;"></i>
+              </div>
+              <!--end of col-->
+              <div class="col-auto" style="padding-left:10px;">
+                <button class="btn btn-lg btn-dark" style="background-color:#2C0A0A;" type="submit" (click)="Search()">Søg</button>
+              </div>
+              <!--end of col-->
+            </div>
+          </div>
+        </div>
+      </div>
+    <div *ngIf="ShowDropDown">
+      <div *ngIf="results.length > 0" class="result-wrapper">
+        <div style="border-top:1px solid lightgrey;" class="row search-results">
+          <div class="col-12 col-md-12 col-lg-12">
+            <div class="row">
+              <div style="padding:15px;" class="col-lg-12 card-sm" *ngFor="let result of results">
+                <a routerLink="/home/customers/{{result.id}}/{{result.name}}" (click)="Clear()">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <img height="60" src="{{result.image}}" alt="cover_image" />
+                    </div>
+                    <div class="col-sm-9" style="line-height:40px;">
+                      {{result.name}}
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="pictures">
+    <ul>
+      <li>
+        <h4>Shinagawa Highball Bar</h4>
+        <img src="https://cdn.trendhunterstatic.com/phpthumbnails/340/340058/340058_2_800.jpeg" style="height: 190px; width: 390px;">
+        <p>Happy hour indtil kl. 00.00</p>
+      </li>
+      <li>
+        <h4>Havanna klubben</h4>
+        <img src="https://static1.squarespace.com/static/562945b7e4b053bbb61bb6f8/t/574e01f0d210b8bdf5fefdd0/1464730123491/?format=1500w" style="height: 100%; width: 390px;">
+        <p>Halv pris på Mokai</p>
+      </li>
+      <li>
+        <h4>Danske disko</h4>
+        <img src="http://www.londontips.dk/wp-content/uploads/2013/06/natklubber_london_diskotek.jpg" style="height: 190px; width: 390px;">
+        <p>Der kommer nogen og spiller</p>
+      </li>
+    </ul>
+  </div><br />
+</div>
+</div>
+<router-outlet></router-outlet>

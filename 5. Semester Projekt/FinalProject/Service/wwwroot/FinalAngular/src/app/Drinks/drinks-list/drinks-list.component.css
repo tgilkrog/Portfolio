@@ -1,0 +1,41 @@
+.customerWrapper{
+    margin-top:20px;
+    width: 100%;
+  }
+
+.menucard{
+    float: left;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    margin-top: 20px;
+    background: #b36912;
+  }
+
+  ul{
+    float: left;
+    list-style: none;
+    width: 24%;
+    height: 200px;
+    text-align: left;
+  }
+
+  h4{
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .button2 {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #2C0A0A;
+    width: 60%;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }

@@ -1,0 +1,20 @@
+<div class="customerWrapper" *ngIf="_route.children.length === 0">
+  <div class="menucard">
+    <ul *ngFor="let drink of list">
+      <li style="float: left; width: 40%;">
+        <img src="{{drink.value.image}}" height="100" width="100">
+      </li>
+
+      <div style="float: left; width: 60%">
+        <li>
+          <h4>{{drink.value.name}}</h4>
+        </li>
+        <li>
+          <button class="button2" routerLink="{{drink.value.id}}/{{drink.value.name}}" value="Detaljer">Detaljer</button>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

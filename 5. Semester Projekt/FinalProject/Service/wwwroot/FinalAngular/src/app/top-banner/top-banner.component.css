@@ -1,0 +1,38 @@
+
+.navbar-nav > li > a {
+  display: block;
+  color: #2C0A0A;
+  /*min-width: 140px;
+    height: 40px;*/
+  text-align: center;
+  line-height: 40px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*background: #2C0A0A;*/
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.navbar-nav > li:hover > a {
+  color: #6a1818;
+  text-decoration: underline;
+}
+  
+.navbar {
+  background-color: #E08417;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-bottom-color: #E9E7D1;
+}
+
+h4 {
+  color: #2C0A0A;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.smallLine {
+  background-color: #2C0A0A;
+  width: 2px;
+  height: 25px;
+  margin-top: 15px;
+}
