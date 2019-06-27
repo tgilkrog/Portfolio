@@ -1,0 +1,61 @@
+html body{
+    background-color: #222831;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+label{
+    color: #eeeeee;
+    font-size: 20px;
+}
+
+table, th, tr, td, h1{
+    color: #eeeeee;
+    border: none !important;
+}
+
+th{
+    background-color: #00adb5;
+    font-size: 20px;
+    color: #222831; 
+}
+
+tr:nth-child(even) {
+    background-color: #393e46;
+}
+
+form{
+    padding: 20px;
+    background-color: #393e46;
+}
+
+.container{
+    padding: 5vh 0 0 0;
+}
+
+.btn{
+    border-radius: 0% !important;
+}
+
+.form-control{
+    border-radius: 0% !important;
+}
+
+.content{
+    padding: 5vh 0 0 0;
+}
+
+.btn-delete{
+    background-color: #d65a31;
+}
+
+.btn-delete:hover{
+    background-color: #de7a5a;
+}
+
+.btn-save{
+    background-color: #00adb5;
+}
+
+.btn-save:hover{
+    background-color: #4cc5cb;
+}
