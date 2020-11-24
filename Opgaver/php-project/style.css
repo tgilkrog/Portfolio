@@ -1,0 +1,195 @@
+/*
+Dark Blue: #12232E
+
+Lighter Blue: #007CC7
+
+Lightest Blue: #4DA8DA
+
+Shadow of Dark Blue: #203647
+
+Shadow of Light Blue: #EEFBFB
+*/
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color:#12232E;
+    text-align: center;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, p{
+    color: #F3F3F3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+.productsList{
+    list-style: none;
+    width: 100%;
+}
+
+.productsListItem{
+    text-align: left;
+    margin: 10px auto;
+    width: 1000px;
+    background-color: rgba(77,168,218, 0.1);
+    border: solid 1px #203647;
+    box-shadow: 1.5px 1.5px 2.5px black;
+}
+
+.productsListItem h2{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.indexButtons{
+    float: right;
+    margin: 15px;
+}
+
+.editBox{
+    width: 100%;
+    display: inline-block;
+}
+
+.editBox h2{
+    display: inline-block;
+}
+
+.descBox{
+    text-align: left;
+    float: left;
+    border: solid 2px #4DA8DA;
+    height: 500px;
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+}
+
+#create{
+    text-align: left;
+    height: auto;
+    width: 500px;
+    padding: 10px;
+    border: solid 2px #4DA8DA;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+  	
+	margin: 10px auto;
+}
+
+.descBox h2, .descBox input[type="text"], #create h2{
+    display: inline-block;
+}
+
+.createBox{
+    visibility: hidden;
+    position: fixed;
+    background-color: #12232E;
+    z-index: 99;
+    height: 560px;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    opacity: 0;
+}
+
+.content{
+    transition: 0.5s;
+}
+
+.content#blur.active{
+    filter: blur(10px);
+    user-select: none;
+    transition: 0.5s;
+}
+
+.createBox.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+    padding:  5px 15px;
+    background-color: #007CC7; 
+    margin: 10px;
+}
+
+a:hover{
+    background-color: #4DA8DA;
+}
+
+#del{
+    background-color: #203647;
+}
+
+#del:hover{
+    background-color:#364a59;
+}
+
+#backBtn{
+    margin-left: 50px;
+    position:absolute;
+    width: 200px;
+}
+
+input[type="text"], textarea{
+    border: none;
+    font-size: 15px;
+    margin: 0;
+	outline: 0;
+    padding: 10px;
+    box-sizing: border-box; 
+    background-color: #e8eeef;
+    box-shadow: 0 1px 0 rgba(0,0,0, 1) inset;
+}
+
+input[type="text"]:focus, textarea:focus{
+    background: #d2d9dd;
+}
+
+input[type="text"]{
+    margin: 0px 0px 0px 10px;
+}
+
+textarea{
+    width: 500px;
+    height: 220px;
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button
+{
+    display: block;
+	padding: 19px 39px 18px 39px;
+	color: #FFF;
+	margin: 0 auto;
+	background: #007CC7;
+	font-size: 18px;
+	text-align: center;
+	border: none;
+	margin-top: 10px;
+}
+
+button:hover
+{
+    cursor: pointer;
+	background: #4DA8DA;
+}
+
+
+
